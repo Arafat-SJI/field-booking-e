@@ -1,0 +1,11 @@
+# Snippet for supabase/config.toml in consumer projects
+# Copy supabase/functions/* to project supabase/functions/
+
+[functions.create-admin]
+verify_jwt = false
+
+[functions.admin-users]
+verify_jwt = true
+
+[functions.send-signup-emails]
+verify_jwt = false

@@ -1,0 +1,62 @@
+{
+  "project_name": "Field Booking Site",
+  "layout": "monorepo",
+  "framework": "next.js (client) + node.js (server)",
+  "generated_by": "AI Project Builder",
+  "generated_at": "2026-11-18T08:49:29.592Z",
+  "source_repository": "sjinnovation/base",
+  "module_count": 1,
+  "file_count": 33,
+  "routes": [
+    "/login",
+    "/signup"
+  ],
+  "modules": [
+    {
+      "id": "login-user-management",
+      "title": "Login / User Management",
+      "included_via_dependency": false,
+      "reason": "Client requires Login and Registration pages with specific UI elements, form inputs, password management, and account creation flows. This module provides full-stack authentication, user management, and UI components for login and signup.",
+      "adapted": true,
+      "env_vars": [
+        "LOGIN_USER_MANAGEMENT_ENABLED",
+        "SUPABASE_URL",
+        "SUPABASE_SERVICE_ROLE_KEY",
+        "VITE_SUPABASE_URL",
+        "VITE_SUPABASE_ANON_KEY",
+        "VITE_APP_NAME",
+        "VITE_APP_URL",
+        "RESEND_API_KEY",
+        "RESEND_FROM"
+      ],
+      "db_tables": [
+        "profiles",
+        "user_roles"
+      ],
+      "generated_files": [
+        "client/components/auth/LoginPage.tsx",
+        "client/components/auth/SignupPage.tsx",
+        "client/components/auth/ProtectedRoute.tsx",
+        "client/components/auth/AccessDenied.tsx",
+        "client/hooks/useAuth.tsx",
+        "client/lib/auth/types.ts",
+        "client/app/login/page.tsx",
+        "client/app/signup/page.tsx",
+        "server/routes/auth/service.js",
+        "server/routes/auth/index.js",
+        "server/routes/auth/config.js",
+        "supabase/functions/create-admin/index.ts",
+        "supabase/functions/admin-users/index.ts",
+        "supabase/functions/send-signup-emails/index.ts",
+        "supabase/migrations/001_login_user_management.sql",
+        "supabase/functions/config.example.toml"
+      ]
+    }
+  ],
+  "common_env_vars": [
+    "SUPABASE_URL",
+    "SUPABASE_SERVICE_ROLE_KEY",
+    "VITE_SUPABASE_URL",
+    "VITE_SUPABASE_ANON_KEY"
+  ]
+}
